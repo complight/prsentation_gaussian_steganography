@@ -1,0 +1,13 @@
+node_modules
+dist/
+dist-local/
+.slidev/
+.cache/
+qa/
+output/
+source/
+original/
+*.log
+.DS_Store
+.env
+.env.*
