@@ -1,19 +1,17 @@
 ---
 theme: default
 title: Gaussian Image Steganography via Parameter-Domain Keyed Embeddings
-info: SIGGRAPH Asia 2026 Technical Communications.
+info: SIGGRAPH Asia 2026 Technical Communications
 author: Tong Wu, Runze Cheng, Xiaoyue Fan, Kaan Akşit
 canvasWidth: 1280
 aspectRatio: 16/9
-colorSchema: light
-transition: fade
+colorSchema: dark
+transition: none
 drawings:
   enabled: false
 fonts:
   provider: none
-  sans: Helvetica, Arial
-  serif: Georgia
-  mono: Courier New
+  sans: Arial, Helvetica
 download: ./TC147_slides.pdf
 exportFilename: TC147_slides
 htmlAttrs:
@@ -23,124 +21,154 @@ layout: none
 clicks: 0
 ---
 
-<PptImage src="slides/slide-01.png" :page="1" title="Gaussian Image Steganography via Parameter-Domain Keyed Embeddings" />
+<Slide01 />
 
 ---
 layout: none
 title: "What is steganography?"
-clicks: 0
+clicks: 6
 ---
 
-<PptImage src="slides/slide-02.png" :page="2" title="What is steganography?" />
+<DeckFrame title="What is steganography?" section="INTRODUCTION" :page="2">
+  <Slide02 />
+</DeckFrame>
 
 ---
 layout: none
 title: "Where can hidden information live?"
-clicks: 0
+clicks: 3
 ---
 
-<PptImage src="slides/slide-03.png" :page="3" title="Where can hidden information live?" />
+<DeckFrame title="Where can hidden information live?" section="RELATED WORK" :page="3" source="HiDDeN, ECCV 2018 · RoSteALS, CVPRW 2023 · GaussianMarker, NeurIPS 2024 · 3D-GSW, CVPR 2025.">
+  <Slide03 />
+</DeckFrame>
 
 ---
 layout: none
 title: "One image represented by 2D Gaussian parameters"
-clicks: 0
+clicks: 3
 ---
 
-<PptImage src="slides/slide-04.png" :page="4" title="One image represented by 2D Gaussian parameters" />
+<DeckFrame title="One image represented by 2D Gaussian parameters" section="OUR SETTING" :page="4">
+  <Slide04 />
+</DeckFrame>
 
 ---
 layout: none
 title: "An image can be represented by 2D Gaussians"
-clicks: 0
+clicks: 5
 ---
 
-<PptImage src="slides/slide-05.png" :page="5" title="An image can be represented by 2D Gaussians" />
+<DeckFrame title="An image can be represented by 2D Gaussians" section="GAUSSIAN REPRESENTATION" :page="5" source="GaussianImage, ECCV 2024; Kerbl et al., SIGGRAPH 2023.">
+  <Slide05 />
+</DeckFrame>
 
 ---
 layout: none
 title: "Fitting Gaussians to the target image"
-clicks: 0
+clicks: 3
 ---
 
-<PptImage src="slides/slide-06.png" :page="6" title="Fitting Gaussians to the target image" />
+<DeckFrame title="Fitting Gaussians to the target image" section="GAUSSIAN REPRESENTATION" :page="6">
+  <Slide06 />
+</DeckFrame>
 
 ---
 layout: none
 title: "Which parameter changes should carry the message?"
-clicks: 0
+clicks: 4
 ---
 
-<PptImage src="slides/slide-07.png" :page="7" title="Which parameter changes should carry the message?" />
+<DeckFrame title="Which parameter changes should carry the message?" section="THE CHALLENGE" :page="7">
+  <Slide07 />
+</DeckFrame>
 
 ---
 layout: none
 title: "Choose the edits, then optimize the parameters"
-clicks: 0
+clicks: 5
 ---
 
-<PptImage src="slides/slide-08.png" :page="8" title="Choose the edits, then optimize the parameters" />
+<DeckFrame title="Choose the edits, then optimize the parameters" section="METHOD OVERVIEW" :page="8" source="Wu et al., SIGGRAPH Asia 2026 Technical Communications, Figure 1.">
+  <Slide08 />
+</DeckFrame>
 
 ---
 layout: none
 title: "Three parameters we can change"
-clicks: 0
+clicks: 4
 ---
 
-<PptImage src="slides/slide-09.png" :page="9" title="Three parameters we can change" />
+<DeckFrame title="Three parameters we can change" section="CANDIDATE EDITS" :page="9">
+  <Slide09 />
+</DeckFrame>
 
 ---
 layout: none
 title: "Choose valid edits with lower cost"
-clicks: 0
+clicks: 5
 ---
 
-<PptImage src="slides/slide-10.png" :page="10" title="Choose valid edits with lower cost" />
+<DeckFrame title="Choose valid edits with lower cost" section="KEYED ASSIGNMENT" :page="10">
+  <Slide10 />
+</DeckFrame>
 
 ---
 layout: none
 title: "Fine-tuning refines the selected parameter edits"
-clicks: 0
+clicks: 3
 ---
 
-<PptImage src="slides/slide-11.png" :page="11" title="Fine-tuning refines the selected parameter edits" />
+<DeckFrame title="Fine-tuning refines the selected parameter edits" section="FINE-TUNING" :page="11" source="Wu et al., Figure 1. The full objective also includes key-specificity and auxiliary robustness terms.">
+  <Slide11 />
+</DeckFrame>
 
 ---
 layout: none
 title: "Read the message from parameter changes"
-clicks: 0
+clicks: 6
 ---
 
-<PptImage src="slides/slide-12.png" :page="12" title="Read the message from parameter changes" />
+<DeckFrame title="Read the message from parameter changes" section="DECODING" :page="12">
+  <Slide12 />
+</DeckFrame>
 
 ---
 layout: none
 title: "The clean and embedded images look similar"
-clicks: 0
+clicks: 4
 ---
 
-<PptImage src="slides/slide-13.png" :page="13" title="The clean and embedded images look similar" />
+<DeckFrame title="The clean and embedded images look similar" section="VISUAL QUALITY" :page="13" source="Wu et al., Figure 2. Source photos: Christian Widell and Christian J. Leuner.">
+  <Slide13 />
+</DeckFrame>
 
 ---
 layout: none
 title: "Cost-aware selection improves recovery over random selection"
-clicks: 0
+clicks: 4
 ---
 
-<PptImage src="slides/slide-14.png" :page="14" title="Cost-aware selection improves recovery over random selection" />
+<DeckFrame title="Cost-aware selection improves recovery over random selection" section="CONTROLLED EVALUATION" :page="14">
+  <Slide14 />
+</DeckFrame>
 
 ---
 layout: none
 title: "The fixed message is recovered from all 112 test images"
-clicks: 0
+clicks: 4
 ---
 
-<PptImage src="slides/slide-15.png" :page="15" title="The fixed message is recovered from all 112 test images" />
+<DeckFrame title="The fixed message is recovered from all 112 test images" section="HELD-OUT EVALUATION" :page="15">
+  <Slide15 />
+</DeckFrame>
 
 ---
 layout: none
 title: "Thank you"
-clicks: 0
+clicks: 1
 ---
 
-<PptImage src="slides/slide-16.png" :page="16" title="Thank you" />
+<DeckFrame title="Thank you" section="GAUSSIAN IMAGE STEGANOGRAPHY" :page="16">
+  <Slide16 />
+</DeckFrame>

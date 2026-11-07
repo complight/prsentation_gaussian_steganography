@@ -9,5 +9,6 @@ source/
 original/
 *.log
 .DS_Store
+.playwright-cli/
 .env
 .env.*

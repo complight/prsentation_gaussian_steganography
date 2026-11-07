@@ -1,11 +1,12 @@
 {
-  "name": "tc147-original-png-slidev",
-  "version": "1.0.1",
+  "name": "tc147-native-slidev",
+  "version": "1.1.0",
   "private": true,
   "scripts": {
     "dev": "slidev slides.md --port 3036",
     "build": "slidev build slides.md --without-notes --base /prsentation_gaussian_steganography/ --out dist --router-mode hash",
-    "preview": "vite preview --host 127.0.0.1"
+    "preview": "vite preview --host 127.0.0.1 --base /prsentation_gaussian_steganography/",
+    "export": "slidev export slides.md --format pdf --output public/TC147_slides.pdf"
   },
   "devDependencies": {
     "@slidev/cli": "53.0.0",
