@@ -2,6 +2,7 @@
 .slidev-layout { padding: 0 !important; overflow: hidden; background: #fff; }
 .slidev-layout > p { margin: 0; }
 .slidev-layout .ppt-slide { position: absolute; inset: 0; }
+.slidev-layout .ppt-image { position: absolute; inset: 0; }
 html, body { background: #fff; }
 @media (prefers-reduced-motion: reduce) {
   .fade-enter-active, .fade-leave-active { transition: none !important; }
